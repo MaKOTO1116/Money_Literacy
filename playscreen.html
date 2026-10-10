@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>お金のゲーム</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body >
+        <header class="header">
+            <div class="status">
+                <p id="money">所持金:10000円</p>
+                <p id="fatigue">疲労度:0%</p>
+                <p id="day">現在の日数:1日目</p>
+                <p id="time">残り時間:10分</p>
+
+                <button id="endDayButton">1日終了</button>
+            </div>
+        </header>
+        <main id="main">
+            <div id="dayEndNotification"></div>
+            <section class="map">
+                <div class="facility-list">
+                    <img src="マップ.svg" alt="マップ" class="mapImage">
+                    <button class="facility" id="bankButton">
+                    <img src="銀行2.svg" alt="銀行">
+                    </button>
+
+                    <button class="facility" id="gymButton">
+                        <img src="GYM2.svg" alt="GYM2">
+                    </button>
+
+                    <button class="facility" id="libraryButton">
+                        <img src="図書館２.svg" alt="図書館">
+                    </button>
+
+                    <button class="facility" id="cityHallButton">
+                        <img src="市役所2.svg" alt="市役所">
+                    </button>
+
+                    <button class="facility" id="stockButton">
+                        <img src="証券会社２.svg" alt="証券会社">
+                    </button>
+
+                    <button class="facility" id="lotteryButton">
+                        <img src="宝くじ2.svg" alt="宝くじ">
+                    </button>
+                    
+                    <button class="facility" id="questButton">
+                        <img src="求人所2.svg" alt="クエストセンター">
+                    </button>
+                </div>
+                
+            </section>
+            <div id="facilitymodal" class="modal">
+                <div class="modalContent">
+                    <h2 id="facilityTitle">施設名</h2>
+                    <p id="explanation">ここに施設の説明が表示される</p>
+                    <!--jsがボタンを追加する場所-->
+                    <div id="facilityActions"></div>
+                    <button id="closeButton">閉じる</button>
+                </div>
+            </div>
+        </main>
+        <script src="play.js"></script>
+    </body>
+</html>

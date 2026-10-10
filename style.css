@@ -1,0 +1,330 @@
+.homescreen {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    gap: 10px; /* ボタン同士の間 */
+    align-items: center;
+    justify-content: center;  /* 上下の中央 */
+}
+
+.homebutton {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    gap: 10px; /* ボタン同士の間 */
+}
+
+body {
+    margin: 0;/*画面の橋の余白をなくす*/
+    font-family: sans-serif;/*文字の種類を設定*/
+    background-color: #dff5d5;/*背景を淡い緑色にする*/
+}
+
+.homescreen {
+    text-align: center;/*タイトルた文章を中央に表示*/
+    margin-top: 80px;/*上から80px下げる*/
+}
+.homescreen h1 {
+    font-size: 70px;
+    margin-bottom: 0px;
+}
+
+.homescreen h3{
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.homebutton button {
+    width: 300px;/*ボタンの横幅*/
+    height: 80px;/*ボタンの高さ*/
+    font-size: 30px;/*ボタンの文字の大きさ*/
+    font-weight: 700;
+    cursor: pointer;/*マウスを乗せる指のマークになる*/
+
+    border: 4px solid black;/*4pxの太い枠線*/
+    border-radius: 15px;/*角を丸くする*/
+    transition: 0.2s;
+}
+
+.header {
+    background-color: white;/*背景を白にする*/
+    border-bottom: 2px solid black;/*したに黒い線を引く*/
+    padding: 15px;/*内側に15pxの余白を作る*/
+}
+
+.status {
+    display: flex;/*ステータスを横に並べる*/
+    justify-content: space-around;/*均等な間隔で並べる*/
+    align-items: center;/*上下の中央にそろえる*/
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+.map {
+    text-align: center;/*マップのタイトルを中央にする*/
+    position: relative;/* このマップを基準にして、中の施設を配置する */
+}
+.mapImage {
+    width: 100%;
+    height: auto;/*縦横比を維持する*/
+    display: block;
+}
+
+.facility-list {
+    grid-template-columns: repeat(3, 180px);
+    /*横に3列、1列180pxで並べる*/
+    justify-content: center;/*全体を中央に寄せる*/
+    gap: 25px;/*ボタン同士の間隔を25pxあける*/
+    position: relative; /* 施設の位置を決めるときの基準となる範囲 */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.facility {
+    width: 160px;
+    height: 180px;
+
+    border: none; /* 枠線を消す */
+    background-color: transparent; /* 白い背景を透明にする */
+
+    position: absolute; /* 施設を通常の並び方から外し、好きな位置に配置できるようにする */
+    padding: 0;
+}
+
+.facility:hover {
+    transform: scale(1.05);/*1.05倍大きくする*/
+}
+
+.facility img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal {
+    display: none;/*最初は表示しない*/
+    
+    position: fixed;/*画面に固定*/
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.5);/*背景を少し暗くする*/
+
+    justify-content: center;/*左右中央*/
+
+    align-items: center;/*上下中央*/
+}
+
+.modalContent {
+    width: 500px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+#bankButton {
+    top: 35%;
+    left: 65%;
+}
+
+#gymButton {
+    top: 20%;
+    left: 5%;
+}
+
+#libraryButton {
+    top: 40%;
+    left: 27%;
+}
+
+#cityHallButton {
+    top: 40%;
+    left: 49%;
+}
+
+#stockButton {
+    top: 5%;
+    left: 55%;
+}
+
+#lotteryButton {
+    top: 30%;
+    left: 78%;
+}
+
+#questButton {
+    top: 20%;
+    left: 20%;
+}
+#endDayButton {
+    width: 100px;
+    height: 30px;
+    border: 3.5px solid black;/*4pxの太い枠線*/
+    border-radius: 10px;/*角を丸くする*/
+    font-weight: 900;/*文字の太さ*/
+}
+
+#endDayButton:hover {
+    transform: scale(1.05);
+}
+#closeButton {
+    width: 90px;
+    height: 30px;
+    border: 3.5px solid black;/*4pxの太い枠線*/
+    border-radius: 10px;/*角を丸くする*/
+    font-weight: 900;/*文字の太さ*/
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+#facilityActions button{
+    width: auto;
+    height: 30px;
+    border: 3.5px solid black;/*4pxの太い枠線*/
+    border-radius: 10px;/*角を丸くする*/
+    font-weight: 900;/*文字の太さ*/
+    background-color: #ceffcc
+}
+
+#facilityTitle {
+    width: fit-content;
+
+    margin: 10px auto 0;
+
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 0;
+
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(152, 189, 245);
+    margin-bottom: 20px;
+}
+
+#explanation {
+    margin-top: 0;
+    font-size: 20px;
+
+}
+
+#facilityActions input {
+    border: 2px solid black;/*4pxの太い枠線*/
+    font-weight: 800;
+    border-radius: 5px;
+
+}
+
+#facilityActions h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#endGameClass {
+    width: 1100px;
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    
+
+    border: none;
+    border-radius: 20px;/*角を丸くする*/
+    background-color: #effde8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#endGameClass h1{
+    font-size: 70px;
+}
+
+#result h3{
+    font-size: 50px;
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;/*角を丸くする*/
+    font-weight: 900;/*文字の太さ*/
+    background-color: #d6f8e8;
+    margin: 10px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#dayEndNotification {
+    position: fixed;
+    top: 10%;
+    right: -550px;
+    width: auto;
+    padding: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    transition: right 0.5s ease;
+}
+
+#dayEndNotification.show {
+    right: 5px;
+}
+
+.explanationModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.explanationContent {
+    background-color: white;
+    width: 70%;
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.explanationContent h2 {
+    margin-top: 0;
+}
+
+.explanationContent h3 {
+    margin-top: 25px;
+}
+
+.explanationContent p {
+    line-height: 1.7;
+}
+
+#explanationCloseButton {
+    background-color:hsl(40, 12%, 90%);
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#newsPaperDiv {
+    height: 300px;
+    overflow-y: auto;
+}

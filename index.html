@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>お金のゲーム</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="homescreen">
+            <h1>お金学習ゲーム</h1>
+            <h3>30分で100,000円を獲得しよう</h3>
+            <div class="homebutton">
+                <button id="startButton">ゲームスタート</button>
+                <button id="explanationButton">ゲーム説明</button>
+            </div>            
+        </div>
+        
+        <!-- ゲーム説明用モーダル -->
+            <div id="explanationModal" class="explanationModal">
+                <div class="explanationContent">
+                    <h2 id="explanationTitle"></h2>
+                    <div id="explanationText"></div>
+                    <button id="explanationCloseButton">閉じる</button>
+                </div>
+            </div>
+        <script src="main.js"></script>
+    </body>
+</html>
